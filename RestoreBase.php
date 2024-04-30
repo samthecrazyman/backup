@@ -370,7 +370,7 @@ class RestoreBase extends \FreePBX\modules\Backup\Models\Restore{
 				$usth->execute([
 					":keyword" => $data['keyword'],
 					":value" => $data['value'],
-					":module" => $data['module']
+					":module" => ($data['module'] ?? NULL)
 				]);
 			}
 		}
